@@ -1,0 +1,209 @@
+.sticky
+{
+	position: sticky;
+	top: 0;
+}
+
+.linkBtn
+{
+	text-decoration: none;
+}
+
+.submitBtn
+{
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: #008080;
+	color: white;
+	padding: 5px 15px;
+}
+
+.submitBtn:hover
+{
+	background-color: black;
+	color: white;
+}
+
+.regBtn
+{
+	padding: 10px 40px;
+}
+
+.logoutBtn
+{
+	margin: 10px;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: #990000;
+	color: white;
+	padding: 5px 15px;
+}
+
+.logoutBtn:hover
+{
+	background-color: black;
+	color: white;
+}
+
+.updateBtn
+{
+	margin: 10px;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: #003399;
+	color: white;
+	padding: 5px 15px;
+}
+.updateBtn:hover
+{
+	background-color: black;
+	color: white;
+}
+
+.acceptBtn
+{
+	margin: 10px;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: #009933;
+	color: white;
+	padding: 5px 15px;
+}
+.acceptBtn:hover
+{
+	background-color: black;
+	color: white;
+}
+
+.yellowtBtn
+{
+	margin: 10px;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: #FFFF0A;
+	color: black;
+	padding: 5px 15px;
+}
+.yellowtBtn:hover
+{
+	background-color: black;
+	color: white;
+}
+
+.gobackBtn
+{
+	margin: 10px;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: #339966;
+	color: white;
+	padding: 5px 15px;
+}
+
+.gobackBtn:hover
+{
+	background-color: black;
+	color: white;
+}
+
+.titleBox
+{
+	border-style: groove;
+	border-radius: 15px;
+	padding: 5px 10px;
+	font-family: cursive;
+}
+
+input
+{
+	border: 2px solid #ccc;
+	border-radius: 3px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 2px;
+	outline: none;
+}
+
+input:focus
+{
+	background-color: #f7f8f7;
+	border: 3px solid #555;
+}
+
+select 
+{
+   padding: 5px 20px;
+   border-radius: 4px;
+   background-color: #f1f1f1;
+}
+
+.fieldSetBorder
+{
+	border-radius: 4px;
+	border : 2px solid black;
+}
+
+.navbar ul 
+{
+  list-style-type: none; /*hide bullet point of the list*/
+  overflow: auto;
+  background-color: #003366;
+}
+
+.navbar li 
+{
+  float: left; /*set starting position of a specific field*/
+}
+
+.navbar li a 
+{
+  display: block; /*increase width of the backgroud bar*/ 
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none; /*hide link underline*/
+}
+
+.navbar li a:hover 
+{
+  background-color: #111;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

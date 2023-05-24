@@ -1,0 +1,87 @@
+<head>
+    <meta name="viewport" content="width=device-width" />
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="contents/css/bootstrap.min.css">
+	<script type="text/javascript" src="contents/js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="contents/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="contents/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+	
+    <title>Login</title>
+</head>
+
+	<div class="col-md-12">
+        <div class="modal-dialog" style="margin-top:200">
+            <div class="modal-content">
+                <div class="panel-heading">
+                    <h6 class="panel-title">Please enter your registered email and password.</h6>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <input class="form-control" type="email" id="Email" name="Email" placeholder="Email"/>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" id="Password" name="Password" placeholder="Password"/>
+                    </div>
+                    <div id="loginFailedMes" class="text-danger">
+                        
+                    </div>
+                    <button class="btn btn-block btn-success" id="loginbt">Login</button>
+
+                </div>
+            </div>
+        </div>
+
+<script>	
+$(document).ready(function(){
+
+
+	$("#loginbt").click(function(){
+
+			$.ajax({
+			url:"http://localhost:56213/api/credentials",
+			method:"GET",
+			data:{
+				"email": $("#Email").val(),
+				"password": $("#Password").val()
+			},
+			complete:function(xmlHttp,status){
+				if(xmlHttp.status==200)
+				{
+					var data=xmlHttp.responseJSON;
+					if(data.type == 1) 
+					{
+						//Admin
+						window.location = "AdminDashboard.html";
+					}
+					else if(data.type == 2)
+					{
+						// sales executive
+					}
+					else if(data.type == 3)
+					{
+						// Buying Agent
+						var value= data.email+":"+data.password;
+						Cookies.set("Authenticatior",btoa(value));
+						Cookies.set("Email", data.email);
+						Cookies.set("Login", 1);
+						window.location = "BuyingAgentHome.html";
+					}
+					else if(data.type == 4)
+					{
+						// customer
+					}
+					else
+					{
+						$("#loginFailedMes").html("Your have been restricted");
+					}
+				}
+				else
+				{
+					$("#loginFailedMes").html(xmlHttp.status+":"+xmlHttp.statusText);
+				}
+			}
+			});
+		});
+});
+</script>

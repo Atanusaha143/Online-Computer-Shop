@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Buying Agent Home</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="assets/JS/jquery-3.6.0.js"></script>
+	<script type="text/javascript" src="assets/JS/script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+	<link rel="stylesheet" href="assets/CSS/style.css">
+</head>
+<style>
+	body
+	{
+	  background-image: url('assets/userHome.JPG');
+	  background-size: 100%;
+	}
+</style>
+<body>
+	<h1><a href="BuyingAgentHome.html" class="linkBtn" style="margin-left:20em" id="onlineTechShop">Online Tech Shop</a></h1>
+	<table border="0" width="100%">
+		<tr class="sticky navbar">
+			<td height="50px" colspan="2">
+				<ul>
+					 <li>
+					 	<a href="BuyingAgentHome.html" style="margin-left: 23em"> Home </a>
+					 </li>
+					 <li>
+					 	<a href="BuyingAgentProfile.html"> Profile </a> 
+					 </li>
+					 <li>
+					 	<a href="ViewPurchaseHistory.html"> View Purchase History </a> 
+					 </li>
+					 <li>
+					 	<a href="ViewBuyingPieChart.html"> View Buying Pie Chart </a> 
+					 </li>
+					 <li>
+					 	<a href="ViewBuyingBarChart.html"> View Buying Bar Chart  </a>
+					 </li> 
+					 <li>
+					 	<a href="BuyingAgentLogout.html" onMouseOver="this.style.background='#990000'" onmouseout="this.style.background='#003366'"> Logout </a>
+					 </li>
+				</ul> 
+			</td>
+		</tr>
+	</table>
+	<center><h2 class="titleBox" align="center" style="width: 45%">Selling Requests</h2></center>
+	<b><p id="msg" style="color: red" align="center"></p></b>
+	<center>
+        <div>
+            <input id="searchBoxHome" placeholder="Search By Category..." type="text" style="width: 50%" class="fieldSetBorder">
+        </div>
+    </center>
+    <br>
+        <center>
+        	<button class="submitBtn" onclick="searchCategory()" id="searcHome"> Search </button>
+        </center>
+	<br>
+	<fieldset id="showOldProducts">
+		<!-- Show table here -->
+	</fieldset>
+	<div id="footer">
+		<fieldset>
+			<p  align="center" style="color: black;"> Online Tech Shop &copy 2021 </p>
+		</fieldset>
+	</div>
+</body>
+</html>

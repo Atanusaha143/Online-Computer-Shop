@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bar Chart</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="assets/JS/jquery-3.6.0.js"></script>
+	 <script type="text/javascript" src="assets/JS/Chart.js"></script>
+	 <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+	<link rel="stylesheet" href="assets/CSS/style.css">
+</head>
+<style>
+	body
+	{
+	  background-image: url('assets/userHome.JPG');
+	  background-size: 100%;
+	}
+</style>
+<body>
+	<h1><a href="BuyingAgentHome.html" class="linkBtn" style="margin-left:20em" id="onlineTechShop">Online Tech Shop</a></h1>
+	<table border="0" width="100%">
+		<tr class="sticky navbar">
+			<td height="50px">
+				<ul>
+					<li>
+					 	<a href="BuyingAgentHome.html" style="margin-left: 23em" id="home"> Home </a>
+					 </li>
+					 <li>
+					 	<a href=""> Profile </a>
+					 </li>
+					 <li>
+					 	<a href="ViewPurchaseHistory.html" id="viewPurchaseHistory"> View Purchase History </a> 
+					 </li>
+					 <li>
+					 	<a href="ViewBuyingPieChart.html"> View Buying Pie Chart </a> 
+					 </li>
+					 <li>
+					 	<a href="ViewBuyingBarChart.html"> View Buying Bar Chart </a> 
+					 </li>
+					 <li>
+					 	<a href="BuyingAgentLogout.html" onMouseOver="this.style.background='#990000'" onmouseout="this.style.background='#003366'"> Logout </a>
+					 </li>
+				</ul> 
+			</td>
+		</tr>
+	</table>
+	<center><h2 class="titleBox" align="center" style="width: 45%">Category Wise Bar Chart</h2></center>
+	<p id="msg"></p>
+	<fieldset style="width: 1000px height:500px" class="fieldSetBorder">
+		<a id="download" download="TotalPurchaseCategoryWise.JPG" href="" class="linkBtn submitBtn">Download</a>
+		<center>
+			<canvas id="showBarChart" width="500" height="120"></canvas>
+		</center>
+	</fieldset>
+	<div id="footer">
+		<fieldset>
+			<p  align="center" style="color: black;"> Online Tech Shop &copy 2021 </p>
+		</fieldset>
+	</div>
+</body>
+<script type="text/javascript" src="assets/JS/BuyingAgentBarChart.js"></script>
+</html>
